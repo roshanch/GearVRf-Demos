@@ -288,13 +288,14 @@ public class ViewerMain extends GVRMain {
 
             // --------------watch
 
-            GVRSceneObject obj1 = new GVRSceneObject(mGVRContext);
+           GVRSceneObject obj1 = new GVRSceneObject(mGVRContext);
             GVRRenderData renderData1 = new GVRRenderData(mGVRContext);
             GVRMesh mesh1 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "watch/frame.obj"));
             renderData1.setMesh(mesh1);
             renderData1.setMaterial(mMetalMaterial);
             obj1.attachRenderData(renderData1);
+            renderData1.setRenderMask(0);
             Objects[2].addChildObject(obj1);
 
             GVRSceneObject obj2 = new GVRSceneObject(mGVRContext);
@@ -302,6 +303,7 @@ public class ViewerMain extends GVRMain {
             GVRMesh mesh2 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "watch/board.obj"));
             renderData2.setMesh(mesh2);
+            renderData2.setRenderMask(0);
             renderData2.setMaterial(mDiffuseMaterial);
             obj2.attachRenderData(renderData2);
             Objects[2].addChildObject(obj2);
@@ -311,6 +313,7 @@ public class ViewerMain extends GVRMain {
             GVRMesh mesh3 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "watch/glass.obj"));
             renderData3.setMesh(mesh3);
+            renderData3.setRenderMask(0);
             renderData3.setMaterial(mGlassMaterial);
             obj3.attachRenderData(renderData3);
 
@@ -329,6 +332,7 @@ public class ViewerMain extends GVRMain {
             renderData5.setMesh(mesh5);
             renderData5.setMaterial(mPhongMaterial);
             obj5.attachRenderData(renderData5);
+            renderData5.setRenderMask(0);
             Objects[1].addChildObject(obj5);
 
             GVRSceneObject obj4 = new GVRSceneObject(mGVRContext);
@@ -337,6 +341,7 @@ public class ViewerMain extends GVRMain {
                     mGVRContext, "jar/edge.obj"));
             renderData4.setMesh(mesh4);
             renderData4.setMaterial(mMetalMaterial);
+            renderData4.setRenderMask(0);
             obj4.attachRenderData(renderData4);
             obj4.getRenderData().setRenderingOrder(3000);
             Objects[1].addChildObject(obj4);
@@ -353,6 +358,7 @@ public class ViewerMain extends GVRMain {
             renderData6.setMesh(mesh6);
             renderData6.setMaterial(mCarBodyMaterial);
             obj6.attachRenderData(renderData6);
+            renderData6.setRenderMask(0);
             obj6.getRenderData().setCullTest(false);
             Objects[3].addChildObject(obj6);
 
@@ -362,6 +368,7 @@ public class ViewerMain extends GVRMain {
                     mGVRContext, "car/tire.obj"));
             renderData9.setMesh(mesh9);
             renderData9.setMaterial(mCarTireMaterial);
+            renderData9.setRenderMask(0);
             obj9.attachRenderData(renderData9);
             Objects[3].addChildObject(obj9);
 
@@ -373,6 +380,7 @@ public class ViewerMain extends GVRMain {
             renderData10.setMaterial(mCarGlassMaterial);
             obj10.attachRenderData(renderData10);
             obj10.getRenderData().setCullTest(false);
+            renderData10.setRenderMask(0);
             obj10.getRenderData().setRenderingOrder(3000);
             Objects[3].addChildObject(obj10);
 
@@ -383,6 +391,7 @@ public class ViewerMain extends GVRMain {
             renderData11.setMesh(mesh11);
             renderData11.setMaterial(mCarWheelMaterial);
             obj11.attachRenderData(renderData11);
+            renderData11.setRenderMask(0);
             Objects[3].addChildObject(obj11);
 
             GVRSceneObject obj12 = new GVRSceneObject(mGVRContext);
@@ -392,6 +401,7 @@ public class ViewerMain extends GVRMain {
             renderData12.setMesh(mesh12);
             renderData12.setMaterial(mCarBackMaterial);
             obj12.attachRenderData(renderData12);
+            renderData12.setRenderMask(0);
             Objects[3].addChildObject(obj12);
 
             GVRSceneObject obj13 = new GVRSceneObject(mGVRContext);
@@ -401,6 +411,7 @@ public class ViewerMain extends GVRMain {
             renderData13.setMesh(mesh13);
             renderData13.setMaterial(mCarGrillMaterial);
             obj13.attachRenderData(renderData13);
+            renderData13.setRenderMask(0);
             obj10.getRenderData().setRenderingOrder(3000);
             Objects[3].addChildObject(obj13);
 
@@ -411,6 +422,7 @@ public class ViewerMain extends GVRMain {
             renderData14.setMesh(mesh14);
             renderData14.setMaterial(mCarLightMaterial);
             obj14.attachRenderData(renderData14);
+            renderData14.setRenderMask(0);
             obj14.getRenderData().setRenderingOrder(4000);
             Objects[3].addChildObject(obj14);
 
@@ -420,6 +432,7 @@ public class ViewerMain extends GVRMain {
                     mGVRContext, "car/inside.obj"));
             renderData19.setMesh(mesh19);
             renderData19.setMaterial(mCarInsideMaterial);
+            renderData19.setRenderMask(0);
             obj19.attachRenderData(renderData19);
             Objects[3].addChildObject(obj19);
 
@@ -434,6 +447,7 @@ public class ViewerMain extends GVRMain {
             GVRMesh mesh15 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "robot/body.obj"));
             renderData15.setMesh(mesh15);
+            renderData15.setRenderMask(0);
             renderData15.setMaterial(mRobotBodyMaterial);
             obj15.attachRenderData(renderData15);
             Objects[4].addChildObject(obj15);
@@ -443,6 +457,7 @@ public class ViewerMain extends GVRMain {
             GVRMesh mesh16 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "robot/head.obj"));
             renderData16.setMesh(mesh16);
+            renderData16.setRenderMask(0);
             renderData16.setMaterial(mRobotHeadMaterial);
             obj16.attachRenderData(renderData16);
             Objects[4].addChildObject(obj16);
@@ -454,6 +469,7 @@ public class ViewerMain extends GVRMain {
             renderData17.setMesh(mesh17);
             renderData17.setMaterial(mRobotMetalMaterial);
             obj17.attachRenderData(renderData17);
+            renderData17.setRenderMask(0);
             obj17.getRenderData().setRenderingOrder(3000);
             Objects[4].addChildObject(obj17);
 
@@ -464,6 +480,7 @@ public class ViewerMain extends GVRMain {
             renderData18.setMesh(mesh18);
             renderData18.setMaterial(mRobotRubberMaterial);
             obj18.attachRenderData(renderData18);
+            renderData18.setRenderMask(0);
             Objects[4].addChildObject(obj18);
 
             Objects[4].getTransform().setPosition(0.0f, 0.0f, -EYE_TO_OBJECT);
@@ -471,11 +488,12 @@ public class ViewerMain extends GVRMain {
 
             // leaf
 
-            GVRSceneObject obj20 = new GVRSceneObject(mGVRContext);
+           GVRSceneObject obj20 = new GVRSceneObject(mGVRContext);
             GVRRenderData renderData20 = new GVRRenderData(mGVRContext);
             GVRMesh mesh20 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "leaf/leaf.obj"));
             renderData20.setMesh(mesh20);
+            renderData20.setRenderMask(0);
             renderData20.setMaterial(mLeafBodyMaterial);
             obj20.attachRenderData(renderData20);
             Objects[0].addChildObject(obj20);
@@ -485,6 +503,7 @@ public class ViewerMain extends GVRMain {
             GVRMesh mesh21 = mGVRContext.loadMesh(new GVRAndroidResource(
                     mGVRContext, "leaf/box.obj"));
             renderData21.setMesh(mesh21);
+            renderData21.setRenderMask(0);
             renderData21.setMaterial(mLeafBoxMaterial);
             obj21.attachRenderData(renderData21);
             Objects[0].addChildObject(obj21);
@@ -492,10 +511,7 @@ public class ViewerMain extends GVRMain {
             Objects[0].getTransform().setPosition(0.0f, 0.0f, -EYE_TO_OBJECT);
             mainScene.addSceneObject(Objects[0]);
 
-            for (int I = 0; I < THUMBNAIL_NUM; I++)
-                for (int i = 0; i < Objects[I].getChildrenCount(); i++)
-                    Objects[I].getChildByIndex(i).getRenderData()
-                            .setRenderMask(0);
+
             // ------------------------------------------------------ set
             // thumbnails
 
@@ -593,6 +609,7 @@ public class ViewerMain extends GVRMain {
             env_object.getRenderData().setCullTest(false);
             mainScene.addSceneObject(env_object);
 
+
             GVRSceneObject headTracker = new GVRSceneObject(gvrContext,
                     gvrContext.createQuad(0.1f, 0.1f),
                     gvrContext.loadTexture(new GVRAndroidResource(mGVRContext,
@@ -610,6 +627,8 @@ public class ViewerMain extends GVRMain {
         // not loaded. Since we don't need anymore, we set it to null to reduce
         // chance of memory leak.
         mActivity = null;
+
+
     }
 
     @Override
