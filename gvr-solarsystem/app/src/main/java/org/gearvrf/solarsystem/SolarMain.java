@@ -79,8 +79,8 @@ public class SolarMain extends GVRMain {
 
         GVRSceneObject sunMeshObject = asyncSceneObject(gvrContext,
                 "sunmap.astc");
-        sunMeshObject.getTransform().setPosition(0.0f, 0.0f, 0.0f);
-        sunMeshObject.getTransform().setScale(10.0f, 10.0f, 10.0f);
+        sunMeshObject.getTransform().setPosition(5.0f, 0.0f, 0.0f);
+        //sunMeshObject.getTransform().setScale(10.0f, 10.0f, 10.0f);
         sunRotationObject.addChildObject(sunMeshObject);
 
         GVRSceneObject mercuryRevolutionObject = new GVRSceneObject(gvrContext);
@@ -101,9 +101,9 @@ public class SolarMain extends GVRMain {
 
         GVRSceneObject venusRotationObject = new GVRSceneObject(gvrContext);
         venusRevolutionObject.addChildObject(venusRotationObject);
-
         GVRSceneObject venusMeshObject = asyncSceneObject(gvrContext,
                 "venusmap.jpg");
+
         venusMeshObject.getTransform().setScale(0.8f, 0.8f, 0.8f);
         venusRotationObject.addChildObject(venusMeshObject);
 
