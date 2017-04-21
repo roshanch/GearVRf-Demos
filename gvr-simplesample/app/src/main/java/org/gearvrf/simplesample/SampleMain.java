@@ -58,7 +58,18 @@ public class SampleMain extends GVRMain {
         sceneObject.getTransform().setPosition(0.0f, 0.0f, -3.0f);
 
         // add the scene object to the scene graph
-        scene.addSceneObject(sceneObject);
+//       scene.addSceneObject(sceneObject);
+
+        for(int i=0; i< 15; i++){
+            for(int j=0; j<15; j++){
+
+                GVRSceneObject sceneObject1 = new GVRSceneObject(gvrContext, 0.5f, 0.5f,
+                        texture);
+                sceneObject1.getTransform().setPosition(-3.0f + i*0.6f, -3.0f + j*0.6f, -3.0f);
+                scene.addSceneObject(sceneObject1);
+            }
+        }
+
 
     }
 

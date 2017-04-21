@@ -23,7 +23,7 @@ import org.gearvrf.immersivepedia.R;
 
 public class CutoutShader {
 
-    public static final String TEXTURE_KEY = "texture";
+    public static final String TEXTURE_KEY = "u_texture";
     public static final String CUTOUT = "cutout";
 
     private GVRCustomMaterialShaderId mShaderId;
@@ -33,7 +33,7 @@ public class CutoutShader {
         final GVRMaterialShaderManager shaderManager = gvrContext.getMaterialShaderManager();
         mShaderId = shaderManager.addShader(R.raw.cutout_vertex, R.raw.cutout_fragment);
         mCustomShader = shaderManager.getShaderMap(mShaderId);
-        mCustomShader.addTextureKey("texture", TEXTURE_KEY);
+        mCustomShader.addTextureKey("u_texture", TEXTURE_KEY);
         mCustomShader.addUniformFloatKey("cutout", CUTOUT);
     }
 

@@ -10,7 +10,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License.
+ * limitations under the License. // android:value="vr_only"/>
  */-->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,7 +32,7 @@
         android:icon="@drawable/gearvr_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="vr_only"/>
+        <meta-data android:name="com.samsung.android.vr.application.mode" android:value="vr_only" />
         <activity
             android:name="org.gearvrf.simplesample.SampleActivity"
             android:screenOrientation="landscape"

@@ -8,7 +8,7 @@ allprojects {
             url "http://google.bintray.com/googlevr"
         }
         flatDir {
-            dirs '../../gearvrf-libs', '../../../GearVRf/GVRf/Framework/framework/build/outputs/aar'
+            dirs '/home/roshan/GearVRf/pure/GearVRf/GVRf/gearvrf-libs'
         }
     }
 }
@@ -96,8 +96,8 @@ if(rootProject.useLocalDependencies) {
             if (rootProject.hasProperty("no_oculus")) {
                 compile(name: 'backend-debug', ext: 'aar')
             } else { //default oculus+daydream
-                compile(name: 'backend_daydream-debug', ext: 'aar')
-                compile(name: 'backend_oculus-debug', ext: 'aar')
+               // compile(name: 'backend_daydream-debug', ext: 'aar')
+                compile(name: 'backend_pure-debug', ext: 'aar')
                 compile 'com.google.vr:sdk-base:1.10.0'
                 compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
             }
@@ -116,8 +116,8 @@ if(rootProject.useLocalDependencies) {
             if (rootProject.hasProperty("no_oculus")) {
                 compile project (':backend')
             } else { //default oculus+daydream
-                compile project (':backend_oculus')
-                compile project (':backend_daydream')
+                compile project (':backend_pure')
+             //   compile project (':backend_daydream')
                 compile 'com.google.vr:sdk-base:1.10.0'
                 compile 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
             }

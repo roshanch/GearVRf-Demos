@@ -21,6 +21,7 @@
         framebufferPixelsHigh="DEFAULT"
         framebufferPixelsWide="DEFAULT"
         showLoadingIcon="true"
+        useMultiview = "true"
         useProtectedFramebuffer="false"
         useAndroidWearTouchpad="true"
         useSrgbFramebuffer="false" >
@@ -39,7 +40,7 @@
             colorFormat="COLOR_8888"
             depthFormat="DEPTH_24"
             fov-y="DEFAULT"
-            multiSamples="4"
+            multiSamples="2"
             resolution="DEFAULT"
             textureFilter="TEXTURE_FILTER_ANISO_4"
             widthScale="1" />
